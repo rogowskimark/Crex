@@ -32,7 +32,7 @@ struct Events {
     
     struct Application {
         
-        struct ApplicationDidBecomeActive: CrexEvent {
+        struct DidBecomeActive: CrexEvent {
             typealias PayloadType = Void
             static let notificationName: NSNotification.Name = .UIApplicationDidBecomeActive
             static let transformation: CrexTransformation = nil
