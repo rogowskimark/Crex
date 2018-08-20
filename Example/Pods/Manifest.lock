@@ -1,0 +1,16 @@
+PODS:
+  - Crex (0.1.0)
+
+DEPENDENCIES:
+  - Crex (from `../`)
+
+EXTERNAL SOURCES:
+  Crex:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  Crex: fc09e27cfe971044d35d2b2aa85772f7b5781b8f
+
+PODFILE CHECKSUM: 48af0cf8ec702e02eb5d3759e17f472dce4f8c0d
+
+COCOAPODS: 1.5.3

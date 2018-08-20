@@ -7,18 +7,55 @@
 //
 
 import UIKit
+import Crex
 
 class ViewController: UIViewController {
-
+    @IBOutlet weak var textField: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        Crex<Events.QueueStateChanged>.addObserver { (_, queueState) in
+            guard let queueState = queueState else {
+                return
+            }
+            
+            print("Queue updated: \(queueState.updatedAt), items left: \(queueState.itemsLeft)")
+        }
+        
+        Crex<Events.QueueDidFinish>.addObserver { (_, _) in
+            print("Queue did finish")
+        }
+        
+        Crex<Events.Application.DidBecomeActive>.addObserver { (_, _) in
+            print("Application did become active")
+        }
+        
+        Crex<Events.UI.KeyboardWillShow>.addObserver { (_, keyboard) in
+            guard let keyboard = keyboard else {
+                return
+            }
+            
+            print("Will show keyboard height: \(keyboard.height), duration: \(keyboard.animationDuration)")
+        }
+        
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    @IBAction func postQueueStateChanged(_ sender: Any) {
+        Crex<Events.QueueStateChanged>.post(Events.QueueStateChanged.Payload(itemsLeft: 42))
     }
-
+    
+    @IBAction func postQueueDidFinish(_ sender: Any) {
+        Crex<Events.QueueDidFinish>.post()
+    }
+    
+    @IBAction func showKeyboard(_ sender: Any) {
+        textField.becomeFirstResponder()
+    }
+    
+    @IBAction func hideKeyboard(_ sender: Any) {
+        textField.resignFirstResponder()
+    }
+    
 }
 

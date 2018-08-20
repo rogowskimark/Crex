@@ -14,6 +14,7 @@
 		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
+		7A818786212AA69C0002BF7E /* Events.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A818785212AA69C0002BF7E /* Events.swift */; };
 		AEE9DF49EAF0398187AAABF5 /* Pods_Crex_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7249D8FC746718E6B92080AF /* Pods_Crex_Example.framework */; };
 /* End PBXBuildFile section */
 
@@ -30,8 +31,8 @@
 /* Begin PBXFileReference section */
 		00E5C3E54373216872751F24 /* Pods-Crex_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Crex_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Crex_Tests/Pods-Crex_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		096B05FA6E11E29695CB194F /* Pods-Crex_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Crex_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Crex_Example/Pods-Crex_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		1A2B3FEC779E2190A9B9AB2F /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
-		3EEA550B98393AC739CE1DCD /* Crex.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = Crex.podspec; path = ../Crex.podspec; sourceTree = "<group>"; };
+		1A2B3FEC779E2190A9B9AB2F /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		3EEA550B98393AC739CE1DCD /* Crex.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Crex.podspec; path = ../Crex.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		3F5D4D409B93B6C968E746C3 /* Pods-Crex_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Crex_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-Crex_Example/Pods-Crex_Example.release.xcconfig"; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* Crex_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Crex_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -44,7 +45,8 @@
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
 		7249D8FC746718E6B92080AF /* Pods_Crex_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Crex_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		A0C4FE49C2B4DA0AE363209C /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		7A818785212AA69C0002BF7E /* Events.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Events.swift; sourceTree = "<group>"; };
+		A0C4FE49C2B4DA0AE363209C /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		A4EADC9BBC87C51DDD915CDA /* Pods-Crex_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Crex_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Crex_Tests/Pods-Crex_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		DDA24677EC69D24423FF78B4 /* Pods_Crex_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Crex_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -95,6 +97,7 @@
 			children = (
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
 				607FACD71AFB9204008FA782 /* ViewController.swift */,
+				7A818785212AA69C0002BF7E /* Events.swift */,
 				607FACD91AFB9204008FA782 /* Main.storyboard */,
 				607FACDC1AFB9204008FA782 /* Images.xcassets */,
 				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
@@ -322,6 +325,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7A818786212AA69C0002BF7E /* Events.swift in Sources */,
 				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
 			);
@@ -415,6 +419,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
@@ -460,6 +465,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 4.0;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;

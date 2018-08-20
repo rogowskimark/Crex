@@ -1,0 +1,22 @@
+{
+  "name": "Crex",
+  "version": "0.1.0",
+  "summary": "A short description of Crex.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/rogowskimark/Crex",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "rogowskimark": "rogowski.mark@gmail.com"
+  },
+  "source": {
+    "git": "https://github.com/rogowskimark/Crex.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "Crex/Classes/**/*"
+}

@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="vXZ-lx-hvc">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -20,11 +21,68 @@
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nj5-gJ-9ia">
+                                <rect key="frame" x="16" y="40" width="343" height="30"/>
+                                <state key="normal" title="Post queue state changed"/>
+                                <connections>
+                                    <action selector="postQueueStateChanged:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="YE2-YZ-1HT"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z6r-MF-5Vw">
+                                <rect key="frame" x="16" y="78" width="343" height="30"/>
+                                <state key="normal" title="Post queue did finish"/>
+                                <connections>
+                                    <action selector="postQueueDidFinish:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="vQC-xI-KfV"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wag-lp-x0L">
+                                <rect key="frame" x="16" y="154" width="343" height="30"/>
+                                <state key="normal" title="show keyboard"/>
+                                <connections>
+                                    <action selector="showKeyboard:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="iKK-be-cLV"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V7Q-EU-e86">
+                                <rect key="frame" x="16" y="192" width="343" height="30"/>
+                                <state key="normal" title="hide keyboard"/>
+                                <connections>
+                                    <action selector="hideKeyboard:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="ruN-yk-xPe"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="some textfield" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gcr-Oe-2uU">
+                                <rect key="frame" x="16" y="116" width="343" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="V7Q-EU-e86" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="03u-KB-pOt"/>
+                            <constraint firstItem="Nj5-gJ-9ia" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="60t-se-FxY"/>
+                            <constraint firstItem="gcr-Oe-2uU" firstAttribute="top" secondItem="z6r-MF-5Vw" secondAttribute="bottom" constant="8" id="6lf-sB-VBm"/>
+                            <constraint firstItem="z6r-MF-5Vw" firstAttribute="top" secondItem="Nj5-gJ-9ia" secondAttribute="bottom" constant="8" id="70k-hY-gBg"/>
+                            <constraint firstItem="gcr-Oe-2uU" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" id="AP0-JU-1yz"/>
+                            <constraint firstItem="z6r-MF-5Vw" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="IPJ-07-Ik6"/>
+                            <constraint firstItem="wag-lp-x0L" firstAttribute="top" secondItem="gcr-Oe-2uU" secondAttribute="bottom" constant="8" id="KN3-dI-0Sh"/>
+                            <constraint firstItem="gcr-Oe-2uU" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="P4h-Jx-CBv"/>
+                            <constraint firstItem="z6r-MF-5Vw" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" id="T5E-xR-jaL"/>
+                            <constraint firstItem="V7Q-EU-e86" firstAttribute="top" secondItem="wag-lp-x0L" secondAttribute="bottom" constant="8" id="blK-TT-4Iy"/>
+                            <constraint firstItem="Nj5-gJ-9ia" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" id="fbb-V7-em2"/>
+                            <constraint firstItem="wag-lp-x0L" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="lcz-VN-4tz"/>
+                            <constraint firstItem="wag-lp-x0L" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" id="myM-vB-mcu"/>
+                            <constraint firstItem="Nj5-gJ-9ia" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="20" id="p73-iZ-2bR"/>
+                            <constraint firstItem="V7Q-EU-e86" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" id="vwC-7J-1rW"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="textField" destination="gcr-Oe-2uU" id="tMH-iW-ccc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="117.59999999999999" y="117.39130434782609"/>
         </scene>
     </scenes>
 </document>
