@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'Crex_Example' do
+  pod 'Crex', :path => '../'
+
+  target 'Crex_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
